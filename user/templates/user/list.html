@@ -1,0 +1,13 @@
+{%  extends 'base_layout.html' %}
+
+
+{% block content %}
+  <h1>Article list</h1>
+    <div class="advisor">
+        {% for adv in advisor %}
+        <div class ="adv">
+           <h2><a href="{% url 'user:booking' id=user.id %}"> {{article.title}}</a></h2>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
